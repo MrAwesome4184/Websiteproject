@@ -9,7 +9,7 @@
     <style>
         /* Your custom CSS styles */
         body {
-            background-color: #f0f0f0; /* Set the background color for the entire page */
+            background-color: #969696; /* Set the background color for the entire page */
             font-family: Arial, sans-serif; /* Example: Set font family for all text */
         }
 
@@ -71,7 +71,7 @@
 
 <body>
     <div class="form-box">
-        <h1>Contact Us</h1>
+        <h1>Contact Me</h1>
         <form method="post" action="sendEmail.php">
             <label for="uname">
                 <i class="fa fa-solid fa-user"></i>
@@ -87,25 +87,13 @@
 
             <label for="phone">
                 <i class="fa fa-solid fa-phone"></i>
-                Phone No
+                Phone Number
             </label>
             <input type="tel" id="phone" name="phone" required>
 
-            <label>
-                <i class="fa fa-solid fa-face-smile"></i>
-                Do you satisfy with our service?
-            </label>
-            <div class="radio-group">
-                <input type="radio" id="yes" name="satisfy" value="yes" checked>
-                <label for="yes">Yes</label>
-
-                <input type="radio" id="no" name="satisfy" value="no">
-                <label for="no">No</label>
-            </div>
-
             <label for="msg">
                 <i class="fa fa-solid fa-comments" style="margin-right: 3px;"></i>
-                Write your Suggestions:
+                Write in your question or request for information regarding contracting work:
             </label>
             <textarea id="msg" name="msg" rows="4" cols="10" required></textarea>
             <button type="submit">Submit</button>
