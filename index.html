@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Basic Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Website</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #888888, #555555);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Basic Website</h1>
-    <p>This is a simple website created using HTML.</p>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    <p>Feel free to explore!</p>
+    <div class="container">
+        <div class="image-container">
+            <img src="path/to/your-image.jpg" alt="Your Image" class="image">
+        </div>
+        <div class="links">
+            <a href="https://example.com">Link 1</a>
+            <a href="https://example.org">Link 2</a>
+            <!-- Add more links as needed -->
+        </div>
+    </div>
 </body>
 </html>
