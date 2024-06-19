@@ -92,6 +92,13 @@
         .footerLinks:hover {
             background-color: #f0f0f0; /* Light gray background on hover */
         }
+            .footerTable {
+        width: 100%;
+        table-layout: fixed; /* Ensure table width is 100% of parent */
+        border-collapse: separate;
+        border-spacing: 10px; /* Adjust spacing between cells */
+        margin: 0 auto; /* Center the table horizontally */
+    }
 
     </style>
 </head>
@@ -133,7 +140,7 @@
             <tbody>
                 <tr>
                     <td class="default" id="tdfooter">
-                        <table class="default" cellspacing="5" style="line-height: 17px; margin: 0 auto;">
+                        <table class="footerTable">
                             <tbody>
                                 <tr>
                                     <td class="footerCell">
@@ -157,6 +164,11 @@
         </table>
     </div>
 </div>
+
+<style>
+
+</style>
+
     </footer>
 </body>
 </html>
