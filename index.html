@@ -3,47 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Mackey</title>
+    <title>Squarespace-like Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <style>
+        /* Global styles */
         body {
-            background: linear-gradient(to bottom, #888888, #555555);
-            color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: #f7f7f7;
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            box-sizing: border-box;
         }
-        .image-container {
+        /* Header styles */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
         }
-        .image {
-            max-width: 33%;
-            height: auto;
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
         }
-        .links {
-            margin-top: 20px;
+        /* Section styles */
+        section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        .links a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-right: 20px;
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        /* Footer styles */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Your Website</h1>
+        </div>
+    </header>
+
     <div class="container">
-        <div class="image-container">
-            <img src="docs/assets/PbIqBmldlR.jpg" alt="Your Image" class="image">
-        </div>
-        <div class="links">
-            <a href="https://example.com">Link 1</a>
-            <a href="https://example.org">Link 2</a>
-            <!-- Add more links as needed -->
-        </div>
+        <section>
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit gravida ex, a fringilla quam tincidunt nec. Donec tincidunt libero sit amet odio eleifend, et lobortis tortor ultrices.</p>
+        </section>
+
+        <section>
+            <h2>Our Services</h2>
+            <p>Integer commodo lacus ligula, ut eleifend nulla facilisis ac. Aliquam congue eros nec fringilla dictum. Pellentesque tempor ante id erat efficitur, vitae lacinia sapien convallis.</p>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>Proin commodo dui in quam ultricies, non posuere nisi cursus. Nunc quis elit sit amet augue accumsan efficitur. Sed vel augue nec urna condimentum suscipit nec vel dui.</p>
+        </section>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
