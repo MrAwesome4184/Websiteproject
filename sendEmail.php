@@ -4,7 +4,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['uname'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $satisfy = $_POST['satisfy'];
     $message = $_POST['msg'];
 
     // Email address where you want to receive the emails
@@ -16,8 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Compose the email content
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n";
-    $email_content .= "Phone: $phone\n";
-    $email_content .= "Satisfaction: $satisfy\n\n";
+    $email_content .= "Phone: $phone\n\n";
     $email_content .= "Message:\n$message";
 
     // Headers
@@ -28,13 +26,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $email_content, $headers)) {
-        echo "<script>alert('Your message has been sent. We will contact you shortly.'); window.location.replace('index.html');</script>";
+        // Redirect to feedback sent page
+        header("Location: feedback-sent.html");
+        exit();
     } else {
-        echo "<script>alert('Failed to send your message. Please try again later.'); window.location.replace('index.html');</script>";
+        // If sending fails, redirect back to the contact form with an error message
+        header("Location: index.html"); // Change to your contact form page
+        exit();
     }
 } else {
-    // If accessed directly, redirect back to index.html
-    header("Location: index.html");
+    // If accessed directly, redirect back to the contact form page
+    header("Location: index.html"); // Change to your contact form page
     exit();
 }
 ?>
