@@ -68,6 +68,30 @@
         footer p {
             margin: 0;
         }
+        a {
+            text-decoration: none; /* Remove underline */
+            color: black; /* Default text color */
+        }
+
+
+        .footerCell {
+            padding: 10px; /* Adjust padding as needed */
+            background-color: white; /* White background */
+            display: inline-block; /* Display as block element to take up width */
+            border: 1px solid #ccc; /* Optional: add border for separation */
+        }
+
+
+        .footerLinks {
+            color: inherit; /* Inherit text color from parent */
+            display: block; /* Ensure each link takes up full width of parent */
+            padding: 5px; /* Padding inside each link */
+        }
+
+        .footerLinks:hover {
+            background-color: #f0f0f0; /* Light gray background on hover */
+        }
+
     </style>
 </head>
 <body>
@@ -100,50 +124,53 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <p>&copy; 2024 Aiden Mackey. All rights reserved.</p>
         </div>
-        <div id="divFooterwrap" role="contentinfo" class=" footerwrap">
-            <div id="newfooter" class="newfooter desktop-footer" style="text-align: center;">
-                <table border="0" cellspacing="0" cellpadding="0" style="width: 100%">
-                    <tbody><tr>
-                        <td class="default" id="tdfooter">
-                            <table class="default" cellspacing="0" style="line-height: 17px;margin: 0 auto;">
-                                <tbody><tr>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks" href="/CustomerService/Uline_FAQ.aspx" id="lnkFooterHelp">Help</a>
-                                        </td>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks" href="/CustomerService/ContactUs_Menu?dup=2" id="hlFooterContactUs">Contact Us</a>
-                                        </td>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks" href="https://www.uline.jobs/?dup=2" id="hlFooterJobs" target="_blank">Careers</a>
-                                        </td>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks" href="/Cls_04/Boxes-Corrugated?dup=2" id="hlFooterCorrugated">Shipping Boxes</a>
-                                        </td>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks" href="/Cls_01/Bags-Poly-Plastic?dup=2" id="hlFooterPlasticBags">Plastic Bags</a>
-                                        </td>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks" href="/CustomerService/RequestCatalog?dup=2" id="hlFooterRequestCatalog">Catalog Request</a>
-                                        </td>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks" href="https://www.uline.ca/?webSyncID=1611bcc4-4e6c-754c-c46d-5c4790e84237&amp;sessionGUID=91225156-a003-a401-b576-99c32d77a9c5" id="hlUlineLink1" rel="nofollow">Uline.ca</a><span class="footerText">&nbsp;/&nbsp;</span><a class="footerLinks" href="https://www.uline.mx/?webSyncID=1611bcc4-4e6c-754c-c46d-5c4790e84237&amp;sessionGUID=91225156-a003-a401-b576-99c32d77a9c5" id="hlUlineLink2" rel="nofollow">Uline.mx</a>
-                                        </td>
-                                            <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                                <a class="footerLinks" href="/CustomerService/PolicyPrivacy.htm" id="hlFooterPrivacy">Privacy</a><span class="footerText">&nbsp;/&nbsp;</span><a class="footerLinks" href="/Terms" id="hlFooterTerms">Terms</a>
-                                            </td>
-                                        <td class="footerCell" style="vertical-align:top; text-align:left;">
-                                            <a class="footerLinks UsableNetAssistive" href="#" id="hlFooterEnableAccessibility" onclick="return enableUsableNetAssistive()" rel="nofollow">Enable Accessibility</a>
-                                        </td>
+<div id="divFooterwrap" role="contentinfo" class="footerwrap">
+    <div id="newfooter" class="newfooter desktop-footer" style="text-align: center;">
+        <table border="0" cellspacing="0" cellpadding="0" style="width: 100%">
+            <tbody>
+                <tr>
+                    <td class="default" id="tdfooter">
+                        <table class="default" cellspacing="0" style="line-height: 17px; margin: 0 auto;">
+                            <tbody>
+                                <tr>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 1</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 2</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 3</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 4</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 5</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 6</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 7</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks" href="#">Link 8</a>
+                                    </td>
+                                    <td class="footerCell">
+                                        <a class="footerLinks UsableNetAssistive" href="#">Accessibility</a>
+                                    </td>
                                 </tr>
-
-                            </tbody></table>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-        </div>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
     </footer>
 </body>
 </html>
