@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squarespace-like Website</title>
+    <title>Aiden Mackey</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <style>
         /* Global styles */
@@ -26,11 +26,19 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            position: relative; /* Ensure relative positioning for absolute positioning */
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
             font-weight: 700;
+        }
+        .header-logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 80px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
         }
         /* Section styles */
         section {
@@ -54,7 +62,6 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
-            position: absolute;
             width: 100%;
             bottom: 0;
         }
@@ -66,7 +73,9 @@
 <body>
     <header>
         <div class="container">
-            <h1>Your Website</h1>
+            <h1>Aiden Mackey</h1>
+            <!-- Image in top right corner -->
+            <img src="path/to/your/image.png" alt="Logo" class="header-logo">
         </div>
     </header>
 
