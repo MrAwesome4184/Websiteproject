@@ -64,44 +64,53 @@
             text-align: center;
             padding: 20px 0;
             width: 100%;
-            bottom: 0;
         }
         footer p {
             margin: 0;
         }
-        a {
-            text-decoration: none; /* Remove underline */
-            color: black; /* Default text color */
+        .footerTable {
+            width: 100%;
+            margin: 0 auto; /* Center the table horizontally */
         }
-
-
         .footerCell {
-            padding: 0; /* Adjust padding as needed */
-            background-color: white; /* White background */
-            display: inline-block; /* Display as block element to take up width */
-            border: 1px solid #ccc; /* Optional: add border for separation */
+            padding: 10px; /* Adjust padding as needed */
         }
-
-
         .footerLinks {
-            color: black; /* Inherit text color from parent */
-            display: block; /* Ensure each link takes up full width of parent */
-            padding: 8px 12px; /* Adjust padding to make buttons thinner */
-            border: 1px solid #ccc; /* Optional: Add border for button-like appearance */
-            border-radius: 4px; /* Optional: Add border radius for rounded corners */
+            text-decoration: none;
+            color: #000;
+            display: block;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
         }
-
         .footerLinks:hover {
-            background-color: #f0f0f0; /* Light gray background on hover */
-        }
-            .footerTable {
-        width: 100%;
-        table-layout: fixed; /* Ensure table width is 100% of parent */
-        border-collapse: separate;
-        border-spacing: 30px; /* Adjust spacing between cells */
-        margin: 0 auto; /* Center the table horizontally */
+            background-color: #f0f0f0;
         }
 
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em; /* Adjust font size for smaller screens */
+            }
+            .header-logo {
+                top: 5px;
+                right: 5px;
+                width: 60px;
+            }
+            section {
+                padding: 20px; /* Adjust padding for sections on smaller screens */
+            }
+            .footerTable {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .footerCell {
+                flex: 0 0 50%; /* Two columns on smaller screens */
+                padding: 5px; /* Adjust padding */
+            }
+        }
     </style>
 </head>
 <body>
@@ -134,43 +143,21 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Aiden Mackey. All rights reserved.</p>
+            <div class="footerTable">
+                <div class="footerCell">
+                    <a class="footerLinks" href="contact.html">Contact</a>
+                </div>
+                <div class="footerCell">
+                    <a class="footerLinks" href="#">Link 2</a>
+                </div>
+                <div class="footerCell">
+                    <a class="footerLinks" href="#">Link 3</a>
+                </div>
+                <div class="footerCell">
+                    <a class="footerLinks UsableNetAssistive" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Help</a>
+                </div>
+            </div>
         </div>
-<div id="divFooterwrap" role="contentinfo" class="footerwrap">
-    <div id="newfooter" class="newfooter desktop-footer" style="text-align: center;">
-        <table border="0" cellspacing="0" cellpadding="0" style="width: 100%">
-            <tbody>
-                <tr>
-                    <td class="default" id="tdfooter">
-                        <table class="footerTable">
-                            <tbody>
-                                <tr>
-                                    <td class="footerCell">
-                                        <a class="footerLinks" href="contact.html">Contact</a>
-                                    </td>
-                                    <td class="footerCell">
-                                        <a class="footerLinks" href="#">Link 2</a>
-                                    </td>
-                                    <td class="footerCell">
-                                        <a class="footerLinks" href="#">Link 3</a>
-                                    </td>
-                                    <td class="footerCell">
-                                        <a class="footerLinks UsableNetAssistive" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Help</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<style>
-
-</style>
-
     </footer>
 </body>
 </html>
