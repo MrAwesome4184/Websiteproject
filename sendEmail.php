@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         // If sending fails, redirect back to the contact form with an error message
-        header("Location: index.html"); // Change to your contact form page
+        header("Location: index.html?error=mail_error"); // Redirect with error query parameter
         exit();
     }
 } else {
