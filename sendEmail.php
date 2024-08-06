@@ -1,13 +1,19 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $name = $_POST['uname'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = $_POST['msg'];
+    // Get form data and sanitize
+    $name = htmlspecialchars(trim($_POST['uname']));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $phone = htmlspecialchars(trim($_POST['phone']));
+    $message = htmlspecialchars(trim($_POST['msg']));
+
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: index.html?error=invalid_email"); // Redirect with error query parameter
+        exit();
+    }
 
     // Email address where you want to receive the emails
-    $to = "aidenon731@yahoo.com";
+    $to = "contact@aidenmackey.com";
     
     // Subject of the email
     $subject = "New Contact Form Submission";
@@ -40,3 +46,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 ?>
+
