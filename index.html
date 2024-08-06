@@ -27,7 +27,7 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            position: relative; /* Ensure relative positioning for absolute positioning */
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -61,37 +61,37 @@
         footer {
             background: #333;
             color: #fff;
-            text-align: center;
             padding: 20px 0;
-            width: 100%;
-        }
-        footer p {
-            margin: 0;
-        }
-        .footerTable {
-            width: 100%;
-            margin: 0 auto; /* Center the table horizontally */
-        }
-        .footerCell {
-            padding: 10px; /* Adjust padding as needed */
-        }
-        .footerLinks {
-            text-decoration: none;
-            color: #000;
-            display: block;
-            padding: 8px 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
             text-align: center;
+            width: 100%;
         }
-        .footerLinks:hover {
-            background-color: #f0f0f0;
+        footer h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
         }
-
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .footer-link {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #555;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .footer-link:hover {
+            background-color: #777;
+            color: #000;
+        }
         /* Media Queries */
         @media only screen and (max-width: 768px) {
             header h1 {
-                font-size: 2em; /* Adjust font size for smaller screens */
+                font-size: 2em;
             }
             .header-logo {
                 top: 5px;
@@ -99,16 +99,11 @@
                 width: 60px;
             }
             section {
-                padding: 20px; /* Adjust padding for sections on smaller screens */
+                padding: 20px;
             }
-            .footerTable {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .footerCell {
-                flex: 0 0 50%; /* Two columns on smaller screens */
-                padding: 5px; /* Adjust padding */
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -143,19 +138,12 @@
 
     <footer>
         <div class="container">
-            <div class="footerTable">
-                <div class="footerCell">
-                    <a class="footerLinks" href="contact.html">Contact</a>
-                </div>
-                <div class="footerCell">
-                    <a class="footerLinks" href="#">Link 2</a>
-                </div>
-                <div class="footerCell">
-                    <a class="footerLinks" href="#">Link 3</a>
-                </div>
-                <div class="footerCell">
-                    <a class="footerLinks UsableNetAssistive" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Help</a>
-                </div>
+            <h2>Quick Links</h2>
+            <div class="footer-links">
+                <a class="footer-link" href="contact.html">Contact</a>
+                <a class="footer-link" href="#">Link 2</a>
+                <a class="footer-link" href="#">Link 3</a>
+                <a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Help</a>
             </div>
         </div>
     </footer>
