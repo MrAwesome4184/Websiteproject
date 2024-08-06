@@ -4,99 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* Your custom CSS styles */
         body {
-            background-color: #969696; /* Set the background color for the entire page */
-            font-family: Arial, sans-serif; /* Example: Set font family for all text */
+            background-color: #f4f4f9; /* Light background for the entire page */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaner font */
+            margin: 0;
+            padding: 0;
         }
 
         .form-box {
             max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff; /* Background color for the form box */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff; /* White background for the form box */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
         }
 
         .form-box h1 {
             text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .form-box p {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
         }
 
         .form-box form {
-            max-width: 400px;
+            max-width: 100%;
             margin: 0 auto;
         }
 
         .form-box label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: bold;
+            color: #555;
         }
 
         .form-box input[type="text"],
         .form-box input[type="email"],
         .form-box input[type="tel"],
         .form-box textarea {
-            width: calc(100% - 20px);
-            padding: 8px;
-            margin-bottom: 12px;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding is included in width */
         }
 
-        .form-box .radio-group {
-            margin-bottom: 12px;
+        .form-box textarea {
+            resize: vertical; /* Allows vertical resizing only */
         }
 
         .form-box button {
-            background-color: #4CAF50;
+            background-color: #007bff; /* Primary color */
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
 
         .form-box button:hover {
-            background-color: #45a049;
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        .form-box button:active {
+            background-color: #003d7a; /* Even darker shade on click */
         }
     </style>
 </head>
 
 <body>
     <div class="form-box">
-        <h1>Contact Me</h1>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
         <form id="contactForm" method="post" action="https://formsubmit.co/contact@aidenmackey.com" onsubmit="handleSubmit(event)">
             <label for="uname">
-                <i class="fa fa-solid fa-user"></i>
-                Name
+                <i class="fa fa-solid fa-user"></i> Name
             </label>
-            <input type="text" id="uname" name="uname" required>
+            <input type="text" id="uname" name="uname" placeholder="Your Name" required>
 
             <label for="email">
-                <i class="fa fa-solid fa-envelope"></i>
-                Email Address
+                <i class="fa fa-solid fa-envelope"></i> Email Address
             </label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
 
             <label for="phone">
-                <i class="fa fa-solid fa-phone"></i>
-                Phone Number
+                <i class="fa fa-solid fa-phone"></i> Phone Number
             </label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
 
             <label for="msg">
-                <i class="fa fa-solid fa-comments" style="margin-right: 3px;"></i>
-                Write in your question or request for information regarding contracting work:
+                <i class="fa fa-solid fa-comments"></i> Your Message
             </label>
-            <textarea id="msg" name="msg" rows="4" cols="10" required></textarea>
-            <button type="submit">Submit</button>
+            <textarea id="msg" name="msg" rows="6" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
         </form>
     </div>
 
@@ -128,4 +146,3 @@
 </body>
 
 </html>
-
