@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Mackey</title>
+    <title>My Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="icon" type="image/x-icon" href="docs/assets/PbIqBmldlR.jpg">
     <style>
-        /* Global styles */
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -21,131 +19,48 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        /* Header styles */
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: 700;
-        }
-        .header-logo {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 80px; /* Adjust size as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
-        /* Section styles */
         section {
             background: #fff;
+            padding: 30px;
             margin: 20px 0;
-            padding: 40px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
         section h2 {
             font-size: 2em;
             margin-bottom: 20px;
+            color: #333;
         }
-        section p {
-            font-size: 1.1em;
-            line-height: 1.8;
+        .services-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        /* Footer styles */
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            width: 100%;
-        }
-        footer h2 {
-            font-size: 1.5em;
+        .services-list li {
             margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #666;
         }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .footer-link {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 8px;
-            background-color: #555;
-            font-weight: bold;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .footer-link:hover {
-            background-color: #777;
-            color: #000;
-        }
-        /* Media Queries */
-        @media only screen and (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            .header-logo {
-                top: 5px;
-                right: 5px;
-                width: 60px;
-            }
-            section {
-                padding: 20px;
-            }
-            .footer-links {
-                flex-direction: column;
-                align-items: center;
-            }
+        .services-list li::before {
+            content: "✔️";
+            margin-right: 10px;
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Aiden Mackey</h1>
-            <!-- Image in top right corner -->
-            <a href="https://www.linkedin.com/in/aiden-mackey-155952220/" class="image-link">
-                <img src="docs/assets/PbIqBmldlR.jpg" alt="Picture of Aiden Mackey" class="header-logo">
-            </a>
-        </div>
-    </header>
-
     <div class="container">
         <section>
-            <h2>About Me</h2>
-            <p>I am an Electrical Engineering student from upstate South Carolina. I am studying at Bob Jones University and will soon graduate. I enjoy working on cars and different projects. My current personal project is finishing my shed and welding a hammock stand I designed myself.</p>
-        </section>
-
-        <section>
             <h2>My Services</h2>
-            <p>I have multiple skills available anywhere from handyman work to landscaping. I am also skilled in Office suite, and can model items in solidworks</p>
-        </section>
-
-        <section>
-            <h2>Contact Me</h2>
-            <p>Feel free to contact me to get in contact <a style="color: #808080;" href="contact.html">Here</a> </p>
+            <p>I offer a diverse range of services tailored to meet your needs:</p>
+            <ul class="services-list">
+                <li><strong>Handyman Work:</strong> Proficient in various home repair and maintenance tasks.</li>
+                <li><strong>Landscaping:</strong> Experienced in designing and maintaining outdoor spaces.</li>
+                <li><strong>Technical Proficiency:</strong> Skilled in using Microsoft Office Suite for efficient project management and documentation.</li>
+                <li><strong>3D Modeling:</strong> Expert in SolidWorks for precise modeling and design work.</li>
+            </ul>
+            <p>Let me know how I can assist with your next project!</p>
         </section>
     </div>
-
-    <footer>
-        <div class="container">
-            <h2>Quick Links</h2>
-            <div class="footer-links">
-                <a class="footer-link" href="contact.html">Contact</a>
-                <a class="footer-link" href="https://www.instagram.com/aidenmackey23">My instagram</a>
-                <a class="footer-link" href="https://www.linkedin.com/in/aiden-mackey-155952220/">LinkedIn</a>
-                <a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Computer Help</a>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
