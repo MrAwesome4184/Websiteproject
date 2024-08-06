@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" type="image/x-icon" href="docs/assets/PbIqBmldlR.jpg">
     <style>
+        /* Global styles */
         body {
-            background-color: #f4f4f9; /* Light background for the entire page */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaner font */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: #f7f7f7;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full viewport height */
         }
-
-        .form-box {
-            max-width: 600px;
-            margin: 20px;
-            padding: 30px;
-            background: #ffffff; /* White background for the form box */
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 1px solid #ddd;
-            text-align: center; /* Center all text within the form box */
-        }
-
-        .form-box h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .form-box p {
-            color: #666;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-
-        .form-box form {
-            max-width: 100%;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
         }
-
+        /* Header styles */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        .header-logo {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #fff; /* White border around the image */
+        }
+        /* Form Section styles */
+        .form-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .form-box h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-box p {
+            font-size: 1.1em;
+            color: #666;
+        }
         .form-box label {
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
             color: #555;
-            text-align: center; /* Center text alignment for labels */
         }
-
         .form-box input[type="text"],
         .form-box input[type="email"],
         .form-box input[type="tel"],
@@ -64,15 +77,10 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
-            box-sizing: border-box; /* Ensures padding is included in width */
+            box-sizing: border-box;
         }
-
-        .form-box textarea {
-            resize: vertical; /* Allows vertical resizing only */
-        }
-
         .form-box button {
-            background-color: #007bff; /* Primary color */
+            background-color: #007bff;
             color: white;
             padding: 12px 24px;
             border: none;
@@ -81,48 +89,127 @@
             font-size: 16px;
             font-weight: bold;
             transition: background-color 0.3s;
-            text-align: center; /* Center text alignment for button */
         }
-
         .form-box button:hover {
-            background-color: #0056b3; /* Darker shade on hover */
+            background-color: #0056b3;
+        }
+        .form-box button:active {
+            background-color: #003d7a;
+        }
+        /* Footer styles */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+        .footerTable {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .footerCell {
+            padding: 10px;
+        }
+        .footerLinks {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-align: center;
+            background: #444;
+        }
+        .footerLinks:hover {
+            background-color: #555;
         }
 
-        .form-box button:active {
-            background-color: #003d7a; /* Even darker shade on click */
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .header-logo {
+                top: 5px;
+                right: 5px;
+                width: 80px;
+            }
+            .form-box {
+                padding: 20px;
+            }
+            .footerTable {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .footerCell {
+                flex: 0 0 50%;
+                padding: 5px;
+            }
         }
     </style>
 </head>
-
 <body>
-    <div class="form-box">
-        <h1>Contact Us</h1>
-        <p>I'd love to hear from you. Fill out this form and I will reach out as soon as possible!</p>
-        <form method="post" action="https://formsubmit.co/contact@aidenmackey.com">
-            <label for="uname">
-                <i class="fa fa-solid fa-user"></i> Name
-            </label>
-            <input type="text" id="uname" name="uname" placeholder="Your Name" required>
+    <header>
+        <div class="container">
+            <h1>Contact Me</h1>
+            <!-- Image in top right corner -->
+            <a href="https://www.linkedin.com/in/aiden-mackey-155952220/" class="image-link">
+                <img src="docs/assets/PbIqBmldlR.jpg" alt="Picture of Aiden Mackey" class="header-logo">
+            </a>
+        </div>
+    </header>
 
-            <label for="email">
-                <i class="fa fa-solid fa-envelope"></i> Email Address
-            </label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <div class="container">
+        <section class="form-box">
+            <h2>Get in Touch</h2>
+            <p>I'm here to help. Please fill out the form below to get in touch with me.</p>
+            <form method="post" action="https://formsubmit.co/contact@aidenmackey.com">
+                <label for="uname">
+                    <i class="fa fa-solid fa-user"></i> Name
+                </label>
+                <input type="text" id="uname" name="uname" placeholder="Your Name" required>
 
-            <label for="phone">
-                <i class="fa fa-solid fa-phone"></i> Phone Number
-            </label>
-            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                <label for="email">
+                    <i class="fa fa-solid fa-envelope"></i> Email Address
+                </label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <label for="msg">
-                <i class="fa fa-solid fa-comments"></i> Your Message
-            </label>
-            <textarea id="msg" name="msg" rows="6" placeholder="Your Message" required></textarea>
+                <label for="phone">
+                    <i class="fa fa-solid fa-phone"></i> Phone Number
+                </label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
 
-            <button type="submit">Send Message</button>
-        </form>
+                <label for="msg">
+                    <i class="fa fa-solid fa-comments"></i> Your Message
+                </label>
+                <textarea id="msg" name="msg" rows="6" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="footerTable">
+                <div class="footerCell">
+                    <a class="footerLinks" href="contact.html">Contact</a>
+                </div>
+                <div class="footerCell">
+                    <a class="footerLinks" href="#">Link 2</a>
+                </div>
+                <div class="footerCell">
+                    <a class="footerLinks" href="#">Link 3</a>
+                </div>
+                <div class="footerCell">
+                    <a class="footerLinks" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Help</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
-
