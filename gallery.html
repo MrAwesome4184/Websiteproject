@@ -33,11 +33,11 @@
             background-color: #f4f4f4;
         }
 
-        /* Grid layout */
+        /* Masonry Grid layout */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px; /* Adjust gap as needed */
         }
 
         .photo-item {
@@ -45,6 +45,7 @@
             overflow: hidden;
             border: 1px solid #ddd;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: grid; /* Ensures that figcaption does not stretch */
         }
 
         .photo-item img {
@@ -72,10 +73,9 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Photography</h1>
-    </header>
-
+<header>
+    <h1>My Photography</h1>
+</header>
 <main>
     <section id="gallery" class="grid">
         <figure class="photo-item">
@@ -914,38 +914,40 @@
 </main>
 
 
-    <footer>
-        <p>&copy; 2024 Aiden Mackey. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2024 Aiden Mackey. All rights reserved.</p>
+</footer>
 
-    <script>
-        // JavaScript for lazy loading
-        document.addEventListener("DOMContentLoaded", () => {
-            const lazyImages = document.querySelectorAll("img[loading='lazy']");
-            
-            if ("IntersectionObserver" in window) {
-                const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
+<script>
+    // JavaScript for lazy loading
+    document.addEventListener("DOMContentLoaded", () => {
+        const lazyImages = document.querySelectorAll("img[loading='lazy']");
+        
+        if ("IntersectionObserver" in window) {
+            const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.onload = () => {
                             lazyImage.removeAttribute('data-src');
                             lazyImage.removeAttribute('loading');
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
+                        };
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
                 });
+            });
 
-                lazyImages.forEach(lazyImage => {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            } else {
-                // Fallback for browsers that don't support IntersectionObserver
-                lazyImages.forEach(lazyImage => {
-                    lazyImage.src = lazyImage.dataset.src;
-                });
-            }
-        });
-    </script>
+            lazyImages.forEach(lazyImage => {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // Fallback for browsers that don't support IntersectionObserver
+            lazyImages.forEach(lazyImage => {
+                lazyImage.src = lazyImage.dataset.src;
+            });
+        }
+    });
+</script>
 </body>
 </html>
