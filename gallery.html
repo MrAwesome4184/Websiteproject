@@ -14,13 +14,22 @@
         }
 
         header {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
             background-color: #f4f4f4;
         }
 
         h1 {
             margin: 0;
+        }
+
+        .home-button {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.2em;
         }
 
         main {
@@ -74,6 +83,7 @@
 </head>
 <body>
 <header>
+    <a href="index.html" class="home-button">Home</a>
     <h1>My Photography</h1>
 </header>
 <main>
@@ -917,37 +927,5 @@
 <footer>
     <p>&copy; 2024 Aiden Mackey. All rights reserved.</p>
 </footer>
-
-<script>
-    // JavaScript for lazy loading
-    document.addEventListener("DOMContentLoaded", () => {
-        const lazyImages = document.querySelectorAll("img[loading='lazy']");
-        
-        if ("IntersectionObserver" in window) {
-            const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const lazyImage = entry.target;
-                        lazyImage.src = lazyImage.dataset.src;
-                        lazyImage.onload = () => {
-                            lazyImage.removeAttribute('data-src');
-                            lazyImage.removeAttribute('loading');
-                        };
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                });
-            });
-
-            lazyImages.forEach(lazyImage => {
-                lazyImageObserver.observe(lazyImage);
-            });
-        } else {
-            // Fallback for browsers that don't support IntersectionObserver
-            lazyImages.forEach(lazyImage => {
-                lazyImage.src = lazyImage.dataset.src;
-            });
-        }
-    });
-</script>
 </body>
 </html>
