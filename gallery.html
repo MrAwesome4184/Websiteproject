@@ -45,19 +45,15 @@
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Masonry Grid layout with CSS Grid */
+        /* Masonry Grid layout */
         .photo-gallery {
-            display: grid;
-            gap: 10px; /* Adjust gap as needed */
-        }
-
-        @media (min-width: 768px) {
-            .photo-gallery {
-                grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
-            }
+            column-count: 3; /* Number of columns in the gallery */
+            column-gap: 10px; /* Horizontal gap between columns */
         }
 
         .photo-item {
+            margin-bottom: 10px; /* Vertical gap between items */
+            break-inside: avoid; /* Avoid page/column breaks inside the element */
             position: relative;
             overflow: hidden;
             border-radius: 10px;
@@ -66,23 +62,10 @@
             transition: transform 0.2s;
         }
 
-        .photo-item:hover {
-            transform: scale(1.02);
-        }
-
-        /* Maintain aspect ratio */
         .photo-item img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 10px;
-        }
-
-        /* Different paddings for portrait and landscape */
-        .photo-item::before {
-            content: "";
-            display: block;
-            padding-top: var(--padding-top, 100%); /* Default to square padding */
         }
 
         .photo-item figcaption {
@@ -101,17 +84,16 @@
             transition: opacity 0.3s;
         }
 
+        .photo-item:hover {
+            transform: scale(1.02);
+        }
+
         .photo-item:hover figcaption {
             visibility: visible;
             opacity: 1;
         }
     </style>
 </head>
-<body>
-<header>
-    <a href="index.html" class="home-button">Home</a>
-    <h1>My Photography</h1>
-</header>
 <body>
 <header>
     <a href="index.html" class="home-button">Home</a>
@@ -952,127 +934,127 @@
             <figcaption>Description for 000017660036 2024-09-04 20_03_59.jpg</figcaption>
         </figure>
         <figure class="photo-item">
-            <img src="docs/assets/000017670001 2024-09-04 20_03_26.jpg" alt="Description for 000017670001 2024-09-04 20_03_26.jpg">
+            <img src="000017670001 2024-09-04 20_03_26.jpg" alt="Description for 000017670001 2024-09-04 20_03_26.jpg">
             <figcaption>Description for 000017670001 2024-09-04 20_03_26.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670002 2024-09-04 20_03_21.jpg" alt="Description for 000017670002 2024-09-04 20_03_21.jpg">
+            <img src="000017670002 2024-09-04 20_03_21.jpg" alt="Description for 000017670002 2024-09-04 20_03_21.jpg">
             <figcaption>Description for 000017670002 2024-09-04 20_03_21.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670003 2024-09-04 20_03_20.jpg" alt="Description for 000017670003 2024-09-04 20_03_20.jpg">
+            <img src="000017670003 2024-09-04 20_03_20.jpg" alt="Description for 000017670003 2024-09-04 20_03_20.jpg">
             <figcaption>Description for 000017670003 2024-09-04 20_03_20.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670004 2024-09-04 20_03_17.jpg" alt="Description for 000017670004 2024-09-04 20_03_17.jpg">
+            <img src="000017670004 2024-09-04 20_03_17.jpg" alt="Description for 000017670004 2024-09-04 20_03_17.jpg">
             <figcaption>Description for 000017670004 2024-09-04 20_03_17.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670005 2024-09-04 20_03_15.jpg" alt="Description for 000017670005 2024-09-04 20_03_15.jpg">
+            <img src="000017670005 2024-09-04 20_03_15.jpg" alt="Description for 000017670005 2024-09-04 20_03_15.jpg">
             <figcaption>Description for 000017670005 2024-09-04 20_03_15.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670006 2024-09-04 20_03_18.jpg" alt="Description for 000017670006 2024-09-04 20_03_18.jpg">
+            <img src="000017670006 2024-09-04 20_03_18.jpg" alt="Description for 000017670006 2024-09-04 20_03_18.jpg">
             <figcaption>Description for 000017670006 2024-09-04 20_03_18.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670007 2024-09-04 20_03_18.jpg" alt="Description for 000017670007 2024-09-04 20_03_18.jpg">
+            <img src="000017670007 2024-09-04 20_03_18.jpg" alt="Description for 000017670007 2024-09-04 20_03_18.jpg">
             <figcaption>Description for 000017670007 2024-09-04 20_03_18.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670008 2024-09-04 20_03_43.jpg" alt="Description for 000017670008 2024-09-04 20_03_43.jpg">
+            <img src="000017670008 2024-09-04 20_03_43.jpg" alt="Description for 000017670008 2024-09-04 20_03_43.jpg">
             <figcaption>Description for 000017670008 2024-09-04 20_03_43.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670018 2024-09-04 20_03_29.jpg" alt="Description for 000017670018 2024-09-04 20_03_29.jpg">
+            <img src="000017670018 2024-09-04 20_03_29.jpg" alt="Description for 000017670018 2024-09-04 20_03_29.jpg">
             <figcaption>Description for 000017670018 2024-09-04 20_03_29.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670021 2024-09-04 20_03_40.jpg" alt="Description for 000017670021 2024-09-04 20_03_40.jpg">
+            <img src="000017670021 2024-09-04 20_03_40.jpg" alt="Description for 000017670021 2024-09-04 20_03_40.jpg">
             <figcaption>Description for 000017670021 2024-09-04 20_03_40.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670022 2024-09-04 20_03_38.jpg" alt="Description for 000017670022 2024-09-04 20_03_38.jpg">
+            <img src="000017670022 2024-09-04 20_03_38.jpg" alt="Description for 000017670022 2024-09-04 20_03_38.jpg">
             <figcaption>Description for 000017670022 2024-09-04 20_03_38.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670023 2024-09-04 20_03_38.jpg" alt="Description for 000017670023 2024-09-04 20_03_38.jpg">
+            <img src="000017670023 2024-09-04 20_03_38.jpg" alt="Description for 000017670023 2024-09-04 20_03_38.jpg">
             <figcaption>Description for 000017670023 2024-09-04 20_03_38.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670024 2024-09-04 20_03_27.jpg" alt="Description for 000017670024 2024-09-04 20_03_27.jpg">
+            <img src="000017670024 2024-09-04 20_03_27.jpg" alt="Description for 000017670024 2024-09-04 20_03_27.jpg">
             <figcaption>Description for 000017670024 2024-09-04 20_03_27.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670025 2024-09-04 20_03_30.jpg" alt="Description for 000017670025 2024-09-04 20_03_30.jpg">
+            <img src="000017670025 2024-09-04 20_03_30.jpg" alt="Description for 000017670025 2024-09-04 20_03_30.jpg">
             <figcaption>Description for 000017670025 2024-09-04 20_03_30.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670026 2024-09-04 20_03_36.jpg" alt="Description for 000017670026 2024-09-04 20_03_36.jpg">
+            <img src="000017670026 2024-09-04 20_03_36.jpg" alt="Description for 000017670026 2024-09-04 20_03_36.jpg">
             <figcaption>Description for 000017670026 2024-09-04 20_03_36.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670027 2024-09-04 20_03_33.jpg" alt="Description for 000017670027 2024-09-04 20_03_33.jpg">
+            <img src="000017670027 2024-09-04 20_03_33.jpg" alt="Description for 000017670027 2024-09-04 20_03_33.jpg">
             <figcaption>Description for 000017670027 2024-09-04 20_03_33.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670028 2024-09-04 20_03_22.jpg" alt="Description for 000017670028 2024-09-04 20_03_22.jpg">
+            <img src="000017670028 2024-09-04 20_03_22.jpg" alt="Description for 000017670028 2024-09-04 20_03_22.jpg">
             <figcaption>Description for 000017670028 2024-09-04 20_03_22.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670029 2024-09-04 20_03_27.jpg" alt="Description for 000017670029 2024-09-04 20_03_27.jpg">
+            <img src="000017670029 2024-09-04 20_03_27.jpg" alt="Description for 000017670029 2024-09-04 20_03_27.jpg">
             <figcaption>Description for 000017670029 2024-09-04 20_03_27.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670030 2024-09-04 20_03_28.jpg" alt="Description for 000017670030 2024-09-04 20_03_28.jpg">
+            <img src="000017670030 2024-09-04 20_03_28.jpg" alt="Description for 000017670030 2024-09-04 20_03_28.jpg">
             <figcaption>Description for 000017670030 2024-09-04 20_03_28.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670031 2024-09-04 20_03_30.jpg" alt="Description for 000017670031 2024-09-04 20_03_30.jpg">
+            <img src="000017670031 2024-09-04 20_03_30.jpg" alt="Description for 000017670031 2024-09-04 20_03_30.jpg">
             <figcaption>Description for 000017670031 2024-09-04 20_03_30.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670032 2024-09-04 20_03_37.jpg" alt="Description for 000017670032 2024-09-04 20_03_37.jpg">
+            <img src="000017670032 2024-09-04 20_03_37.jpg" alt="Description for 000017670032 2024-09-04 20_03_37.jpg">
             <figcaption>Description for 000017670032 2024-09-04 20_03_37.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670033 2024-09-04 20_03_30.jpg" alt="Description for 000017670033 2024-09-04 20_03_30.jpg">
+            <img src="000017670033 2024-09-04 20_03_30.jpg" alt="Description for 000017670033 2024-09-04 20_03_30.jpg">
             <figcaption>Description for 000017670033 2024-09-04 20_03_30.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670034 2024-09-04 20_03_42.jpg" alt="Description for 000017670034 2024-09-04 20_03_42.jpg">
+            <img src="000017670034 2024-09-04 20_03_42.jpg" alt="Description for 000017670034 2024-09-04 20_03_42.jpg">
             <figcaption>Description for 000017670034 2024-09-04 20_03_42.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670035 2024-09-04 20_03_40.jpg" alt="Description for 000017670035 2024-09-04 20_03_40.jpg">
+            <img src="000017670035 2024-09-04 20_03_40.jpg" alt="Description for 000017670035 2024-09-04 20_03_40.jpg">
             <figcaption>Description for 000017670035 2024-09-04 20_03_40.jpg</figcaption>
         </figure>
         
         <figure class="photo-item">
-            <img src="docs/assets/000017670036 2024-09-04 20_03_37.jpg" alt="Description for 000017670036 2024-09-04 20_03_37.jpg">
+            <img src="000017670036 2024-09-04 20_03_37.jpg" alt="Description for 000017670036 2024-09-04 20_03_37.jpg">
             <figcaption>Description for 000017670036 2024-09-04 20_03_37.jpg</figcaption>
         </figure>
     </div>
