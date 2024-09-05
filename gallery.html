@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f4f4f4;
         }
 
         header {
@@ -18,7 +19,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -27,7 +29,7 @@
 
         .home-button {
             text-decoration: none;
-            color: #000;
+            color: #333;
             font-weight: bold;
             font-size: 1.2em;
         }
@@ -39,44 +41,56 @@
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #f4f4f4;
+            background-color: #fff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
         /* Masonry Grid layout */
-        .grid {
+        .photo-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 10px;
             gap: 10px; /* Adjust gap as needed */
         }
 
         .photo-item {
             position: relative;
             overflow: hidden;
+            border-radius: 10px;
             border: 1px solid #ddd;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: grid; /* Ensures that figcaption does not stretch */
+            transition: transform 0.2s;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.02);
         }
 
         .photo-item img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
-            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
         }
 
         .photo-item figcaption {
             position: absolute;
             bottom: 0;
+            left: 0;
+            right: 0;
             background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            width: 100%;
-            text-align: center;
+            color: white;
             padding: 10px;
+            border-radius: 0 0 10px 10px;
+            font-size: 14px;
+            text-align: center;
+            visibility: hidden;
             opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s, visibility 0.3s;
         }
 
         .photo-item:hover figcaption {
+            visibility: visible;
             opacity: 1;
         }
     </style>
@@ -87,7 +101,7 @@
     <h1>My Photography</h1>
 </header>
 <main>
-    <section id="gallery" class="grid">
+    <div class="photo-gallery">
         <figure class="photo-item">
             <img src="docs/assets/000003350003.jpg" alt="Description for 000003350003.jpg" >
             <figcaption>Description for 000003350003.jpg</figcaption>
@@ -1044,11 +1058,10 @@
             <img src="000017670036 2024-09-04 20_03_37.jpg" alt="Description for 000017670036 2024-09-04 20_03_37.jpg">
             <figcaption>Description for 000017670036 2024-09-04 20_03_37.jpg</figcaption>
         </figure>
-    </section>
+    </div>
 </main>
-
 <footer>
-    <p>&copy; 2024 Aiden Mackey. All rights reserved.</p>
+    &copy; 2023 My Photography
 </footer>
 </body>
 </html>
