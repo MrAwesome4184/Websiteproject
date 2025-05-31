@@ -15,6 +15,27 @@
             margin: 0;
             padding: 0;
         }
+        .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Default for larger screens */
+        position: relative;
+    }
+
+    /* Override for mobile */
+    @media only screen and (max-width: 768px) {
+        header h1 {
+            font-size: 2em;
+        }
+        .header-logo {
+            width: 60px;
+            top: auto;
+            right: auto;
+        }
+        .header-content {
+            justify-content: space-between;
+        }
+    }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -112,7 +133,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-content">
             <h1>Aiden Mackey</h1>
             <a href="https://www.linkedin.com/in/aiden-mackey-155952220/" class="image-link">
                 <img src="assets/Headshot2.jpg" alt="Picture of Aiden Mackey" class="header-logo">
